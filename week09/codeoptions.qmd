@@ -1,0 +1,114 @@
+---
+title: "codeoptions"
+subtitle: A Year 1 Textbook Chapter
+format:
+  html: default
+code-annotations: hover
+execute: 
+  warning: false
+---
+
+## Version 1 - Chunk Fold with line numbers
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+#| code-line-numbers: true
+
+library(tidyverse)
+library(palmerpenguins)
+penguins |>                                      # <1>
+  mutate(                                        # <2>
+    bill_ratio = bill_depth_mm / bill_length_mm, # <2>
+    bill_area  = bill_depth_mm * bill_length_mm  # <2>
+  ) 
+```
+
+1.  Take `penguins`, and then,
+2.  add new columns for the bill ratio and bill area.
+
+## Version 2 - Standard Tabset with code and Code Yoda
+
+::: panel-tabset
+## Code
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+penguins |>                                     
+  mutate(                                       
+    bill_ratio = bill_depth_mm / bill_length_mm,
+    bill_area  = bill_depth_mm * bill_length_mm 
+  )
+
+```
+
+## CodeYoda (#\| eval: false)
+
+```{r}
+#| eval: false
+library(tidyverse)
+library(palmerpenguins)
+penguins |>                                      # <1>
+  mutate(                                        # <2>
+    bill_ratio = bill_depth_mm / bill_length_mm, # <2>
+    bill_area  = bill_depth_mm * bill_length_mm  # <2>
+  )
+```
+
+1.  Take `penguins`, and then,
+2.  add new columns for the bill ratio and bill area.
+:::
+
+## Version 3 - Panelize and Webr (coatless) and can't seem to get annotations to work (echo:false for R)
+
+::: to-webr
+```{r}
+
+library(tidyverse)
+library(palmerpenguins)
+penguins |>                                     
+  mutate(                                       
+    bill_ratio = bill_depth_mm / bill_length_mm,
+    bill_area  = bill_depth_mm * bill_length_mm 
+  )         
+```
+:::
+
+## Version 4 - Just trying to get the Code annotations to work (#\| eval: false)
+
+```{r}
+#| eval: false
+library(tidyverse)
+library(palmerpenguins)
+penguins |>                                      # <1>
+  mutate(                                        # <2>
+    bill_ratio = bill_depth_mm / bill_length_mm, # <2>
+    bill_area  = bill_depth_mm * bill_length_mm  # <2>
+  )
+```
+
+1.  Take `penguins`, and then,
+2.  add new columns for the bill ratio and bill area.
+
+# Embedding pdf
+
+## Native Quarto
+
+![](assets/dummypdf.pdf)
+
+## With size spec ![](assets/dummypdf.pdf){width="60%" height="400"}
+
+## With embedpdf extension x3 from raw file
+{{< pdf ./assets/dummypdf.pdf >}}
+
+raw file with size options
+{{< pdf ./assets/dummypdf.pdf width=100% height=800 >}}
+
+url with ""
+{{< pdf "https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf" >}}
+<<<<<<< HEAD
+
+{{< pdf "https://interrm.littlemonkeylab.com/week01/data/dummypdf.pdf" >}}
+=======
+>>>>>>> 945ad51f57d64470c9643cb73b8bd6151555b866

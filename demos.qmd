@@ -1,0 +1,15 @@
+---
+title: "Demonstrations"
+subtitle: Demonstrations of stuff
+---
+
+Here is a demo of web-r
+[web-r demo](webr.qmd)
+
+Here is a demo of webexercises
+[webexercises demo](webexercises.qmd)
+
+Here is a demo of a download button
+[downloadthis demo](downloadthis.qmd)
+
+

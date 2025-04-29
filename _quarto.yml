@@ -26,14 +26,18 @@ book:
           href: week01/WhatIsScience.qmd
         - text: Chapter 1 (Stats)
           href: week01/WhyStatistics.qmd
-    - part: Research Methods Textbook
-      chapters:
-        - text: "Chapter 1: Foundations"
-          href: textbook/01-WhatIsScience.qmd
-    - part: Stats Textbook
-      chapters:
-        - text: Why Statistics?
-          href: textbook/01-WhyStatistics.qmd
+    # - part: Research Methods Textbook
+    #   chapters:
+    #     - text: "Chapter 1: Foundations"
+    #       href: Crump-ResearchMethods/01-PsychScience.qmd
+    #     - text: "Chapter 2: Getting Started"
+    #       href: Crump-ResearchMethods/02-GettingStarted.qmd
+    # - part: Stats Textbook
+    #   chapters:
+    #     - text: "Science Data"
+    #       href: CRUMP/01-Science_Data.qmd
+    #     - text: "Describing Data"
+    #       href: CRUMP/02-Describing_Data.qmd
   page-footer:
     right: |
       This page is built with {{< fa brands r-project >}}, ☕, ❤️ and [Quarto](https://quarto.org/) <br>

@@ -1,0 +1,26 @@
+---
+title: "DownloadThis Demo"
+subtitle: How to download files and stuff
+format:
+  html: 
+    code-tools: true
+    code-fold: true
+    code-annotations: hover
+    title-block-banner: true
+
+filters: 
+  - webr
+  
+execute: 
+  warning: false
+---
+
+## What a terrific Website
+
+and this is some sparkling content.
+
+How could I possibly download the data you mention?
+
+{{< downloadthis data/lab01.pdf dname=LAB01 label="Download the lab pdf" icon=file-earmark-pdf type=success >}}
+
+There you go, mydude!

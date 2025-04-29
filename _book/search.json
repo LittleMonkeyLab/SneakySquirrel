@@ -40,80 +40,25 @@
     ]
   },
   {
-    "objectID": "week01/dsk.html",
-    "href": "week01/dsk.html",
-    "title": "5  DataSkills",
-    "section": "",
-    "text": "library(webr)\n\n::: {.webex-name=“Try This”}\nx &lt;- c(1, 2, 3, 4)\nmean(x)\n:::",
-    "crumbs": [
-      "Week 01",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>DataSkills</span>"
-    ]
-  },
-  {
     "objectID": "week01/WhatIsScience.html",
     "href": "week01/WhatIsScience.html",
-    "title": "6  WhatIsScience (Week Link)",
+    "title": "5  WhatIsScience (Week Link)",
     "section": "",
     "text": "Please read WhatIsScience",
     "crumbs": [
       "Week 01",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 1 (RM)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Chapter 1 (RM)</span>"
     ]
   },
   {
     "objectID": "week01/WhyStatistics.html",
     "href": "week01/WhyStatistics.html",
-    "title": "7  WhyStatistics (Week Link)",
+    "title": "6  WhyStatistics (Week Link)",
     "section": "",
     "text": "Please read WhyStatistics",
     "crumbs": [
       "Week 01",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter 1 (Stats)</span>"
-    ]
-  },
-  {
-    "objectID": "textbook/01-WhatIsScience.html",
-    "href": "textbook/01-WhatIsScience.html",
-    "title": "8  WhatIsScience",
-    "section": "",
-    "text": "8.1 WhatIsScience",
-    "crumbs": [
-      "Research Methods Textbook",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Chapter 1: Foundations</span>"
-    ]
-  },
-  {
-    "objectID": "textbook/01-WhatIsScience.html#whatisscience",
-    "href": "textbook/01-WhatIsScience.html#whatisscience",
-    "title": "8  WhatIsScience",
-    "section": "",
-    "text": "Concepts\nDiscussion",
-    "crumbs": [
-      "Research Methods Textbook",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Chapter 1: Foundations</span>"
-    ]
-  },
-  {
-    "objectID": "textbook/01-WhyStatistics.html",
-    "href": "textbook/01-WhyStatistics.html",
-    "title": "9  WhyStatistics",
-    "section": "",
-    "text": "9.1 WhyStatistics",
-    "crumbs": [
-      "Stats Textbook",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Why Statistics?</span>"
-    ]
-  },
-  {
-    "objectID": "textbook/01-WhyStatistics.html#whystatistics",
-    "href": "textbook/01-WhyStatistics.html#whystatistics",
-    "title": "9  WhyStatistics",
-    "section": "",
-    "text": "Stats logic\nInference",
-    "crumbs": [
-      "Stats Textbook",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Why Statistics?</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 1 (Stats)</span>"
     ]
   }
 ]
