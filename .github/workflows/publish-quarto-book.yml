@@ -18,7 +18,7 @@ jobs:
     - name: Setup Quarto
       uses: quarto-dev/quarto-actions/setup@v2
       with:
-        version: stable
+        version: 1.7.29
 
     # Step 3: Set up R with caching
     - name: Set up R
