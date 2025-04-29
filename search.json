@@ -1,0 +1,108 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "GS_ResMeth_DemoBook",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book Draft o1.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. The TeXbook. Addison-Wesley.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. The TeXbook. Addison-Wesley.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "week01/WhatIsScience.html",
+    "href": "week01/WhatIsScience.html",
+    "title": "5  WhatIsScience (Week Link)",
+    "section": "",
+    "text": "Please read WhatIsScience",
+    "crumbs": [
+      "Week 01",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Chapter 1 (RM)</span>"
+    ]
+  },
+  {
+    "objectID": "week01/WhyStatistics.html",
+    "href": "week01/WhyStatistics.html",
+    "title": "6  WhyStatistics (Week Link)",
+    "section": "",
+    "text": "Please read WhyStatistics",
+    "crumbs": [
+      "Week 01",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 1 (Stats)</span>"
+    ]
+  },
+  {
+    "objectID": "textbook/01-WhatIsScience.html",
+    "href": "textbook/01-WhatIsScience.html",
+    "title": "7  WhatIsScience",
+    "section": "",
+    "text": "7.1 WhatIsScience",
+    "crumbs": [
+      "Research Methods Textbook",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter 1: Foundations</span>"
+    ]
+  },
+  {
+    "objectID": "textbook/01-WhatIsScience.html#whatisscience",
+    "href": "textbook/01-WhatIsScience.html#whatisscience",
+    "title": "7  WhatIsScience",
+    "section": "",
+    "text": "Concepts\nDiscussion",
+    "crumbs": [
+      "Research Methods Textbook",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter 1: Foundations</span>"
+    ]
+  },
+  {
+    "objectID": "textbook/01-WhyStatistics.html",
+    "href": "textbook/01-WhyStatistics.html",
+    "title": "8  WhyStatistics",
+    "section": "",
+    "text": "8.1 WhyStatistics",
+    "crumbs": [
+      "Stats Textbook",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Why Statistics?</span>"
+    ]
+  },
+  {
+    "objectID": "textbook/01-WhyStatistics.html#whystatistics",
+    "href": "textbook/01-WhyStatistics.html#whystatistics",
+    "title": "8  WhyStatistics",
+    "section": "",
+    "text": "Stats logic\nInference",
+    "crumbs": [
+      "Stats Textbook",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Why Statistics?</span>"
+    ]
+  }
+]
