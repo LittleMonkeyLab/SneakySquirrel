@@ -60,49 +60,5 @@
       "Week 01",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 1 (Stats)</span>"
     ]
-  },
-  {
-    "objectID": "textbook/01-WhatIsScience.html",
-    "href": "textbook/01-WhatIsScience.html",
-    "title": "7  WhatIsScience",
-    "section": "",
-    "text": "7.1 WhatIsScience",
-    "crumbs": [
-      "Research Methods Textbook",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter 1: Foundations</span>"
-    ]
-  },
-  {
-    "objectID": "textbook/01-WhatIsScience.html#whatisscience",
-    "href": "textbook/01-WhatIsScience.html#whatisscience",
-    "title": "7  WhatIsScience",
-    "section": "",
-    "text": "Concepts\nDiscussion",
-    "crumbs": [
-      "Research Methods Textbook",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter 1: Foundations</span>"
-    ]
-  },
-  {
-    "objectID": "textbook/01-WhyStatistics.html",
-    "href": "textbook/01-WhyStatistics.html",
-    "title": "8  WhyStatistics",
-    "section": "",
-    "text": "8.1 WhyStatistics",
-    "crumbs": [
-      "Stats Textbook",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Why Statistics?</span>"
-    ]
-  },
-  {
-    "objectID": "textbook/01-WhyStatistics.html#whystatistics",
-    "href": "textbook/01-WhyStatistics.html#whystatistics",
-    "title": "8  WhyStatistics",
-    "section": "",
-    "text": "Stats logic\nInference",
-    "crumbs": [
-      "Stats Textbook",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Why Statistics?</span>"
-    ]
   }
 ]
