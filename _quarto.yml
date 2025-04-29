@@ -3,23 +3,62 @@ project:
 
 book:
   title: "GS_ResMeth_DemoBook"
-  author: "Norah Jones"
+  author: "Dr. Gordon Wright and the gang"
   date: "4/29/2025"
   chapters:
     - index.qmd
     - intro.qmd
     - summary.qmd
     - references.qmd
+    - part: Overview
+      chapters:
+        - text: Syllabus
+          href: index.qmd
+    - part: Week 01
+      chapters:
+        - text: Lecture
+          href: week01/lecture.qmd
+        - text: Lab
+          href: week01/lab.qmd
+        - text: DataSkills
+          href: week01/dsk.qmd
+        - text: Chapter 1 (RM)
+          href: week01/WhatIsScience.qmd
+        - text: Chapter 1 (Stats)
+          href: week01/WhyStatistics.qmd
+    - part: Research Methods Textbook
+      chapters:
+        - text: "Chapter 1: Foundations"
+          href: textbook/01-WhatIsScience.qmd
+    - part: Stats Textbook
+      chapters:
+        - text: Why Statistics?
+          href: textbook/01-WhyStatistics.qmd
+  page-footer:
+    right: |
+      This page is built with {{< fa brands r-project >}}, ☕, ❤️ and [Quarto](https://quarto.org/) <br>
+      [View the source at {{< fa brands github >}} GitHub](https://github.com/littlemonkeylab/ps52007dslides.com)
+    left: |
+      Content {{< fa brands creative-commons >}} 2023 by Gordon Wright {{< fa brands orcid >}} <strong>ORCID</strong> [0000-0001-9424-5743](https://orcid.org/0000-0001-9424-5743). All content licensed under a {{< fa brands creative-commons >}}
+      {{< fa brands creative-commons-by >}} {{< fa brands creative-commons-nc >}} {{< fa brands creative-commons-sa >}}<br>
+      [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+    background: "#000080"
 
 bibliography: references.bib
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: cosmo
+    code-copy: hover
+    css: include/webex.css
+    include-after-body: include/webex.js
+    mainfont: "Atkinson Hyperlegible"
+    monofont: "Fira Code"
+    toc: true
+    link-external-newwindow: false
+    link-external-icon: false
+    theme-dark: dark.scss
+    theme-light: light.scss
+  
   pdf:
     documentclass: scrreprt
-
-
-

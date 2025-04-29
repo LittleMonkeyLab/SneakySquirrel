@@ -1,0 +1,318 @@
+---
+title: "Webexercises"
+---
+
+```{r, echo = FALSE, results='asis'}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Uncomment to change widget colours:
+#style_widgets(incorrect = "goldenrod", correct = "purple", highlight = "firebrick")
+```
+
+This is a Web Exercise template created by the [psychology teaching team
+at the University of Glasgow](http://www.psy.gla.ac.uk), based on ideas
+from [Software Carpentry](https://software-carpentry.org/lessons/). This
+template shows how instructors can easily create interactive web
+documents that students can use in self-guided learning.
+
+The `{webexercises}` package provides a number of functions that you use
+in [inline R
+code](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
+or through code chunk options to create HTML widgets (text boxes, pull
+down menus, buttons that reveal hidden content). Examples are given
+below. Render this file to HTML to see how it works.
+
+**NOTE: To use the widgets in the compiled HTML file, you need to have a
+JavaScript-enabled browser.**
+
+## Example Questions
+
+### Fill-In-The-Blanks (`fitb()`)
+
+Create fill-in-the-blank questions using `fitb()`, providing the answer
+as the first argument.
+
+-   2 + 2 is `r fitb(4)`
+
+You can also create these questions dynamically, using variables from
+your R session.
+
+```{r}
+x <- sample(2:8, 1)
+```
+
+-   The square root of `r x^2` is: `r fitb(x)`
+
+The blanks are case-sensitive; if you don't care about case, use the
+argument `ignore_case = TRUE`.
+
+-   What is the letter after D? `r fitb("E", ignore_case = TRUE)`
+
+If you want to ignore differences in whitespace use, use the argument
+`ignore_ws = TRUE` (which is the default) and include spaces in your
+answer anywhere they could be acceptable.
+
+-   How do you load the tidyverse package?
+    `r fitb(c("library( tidyverse )", "library( \"tidyverse\" )", "library( 'tidyverse' )"), ignore_ws = TRUE, width = "20")`
+
+You can set more than one possible correct answer by setting the answers
+as a vector.
+
+-   Type a vowel:
+    `r fitb(c("A", "E", "I", "O" , "U"), ignore_case = TRUE)`
+
+You can use regular expressions to test answers against more complex
+rules.
+
+-   Type any 3 letters:
+    `r fitb("^[a-zA-Z]{3}$", width = 3, regex = TRUE)`
+
+### Multiple Choice (`mcq()`)
+
+-   "Never gonna give you up, never gonna:
+    `r mcq(c("let you go", "turn you down", "run away", answer = "let you down"))`"
+-   "I
+    `r mcq(c(answer = "bless the rains", "guess it rains", "sense the rain"))`
+    down in Africa" -Toto
+
+### True or False (`torf()`)
+
+-   True or False? You can permute values in a vector using `sample()`.
+    `r torf(TRUE)`
+
+### Longer MCQs (`longmcq()`)
+
+When your answers are very long, sometimes a drop-down select box gets
+formatted oddly. You can use `longmcq()` to deal with this. Since the
+answers are long, It's probably best to set up the options inside an R
+chunk with `echo=FALSE`.
+
+**What is a p-value?**
+
+```{r}
+opts_p <- c(
+   "the probability that the null hypothesis is true",
+   answer = "the probability of the observed, or more extreme, data, under the assumption that the null-hypothesis is true",
+   "the probability of making an error in your conclusion"
+)
+```
+
+`r longmcq(opts_p)`
+
+**What is true about a 95% confidence interval of the mean?**
+
+```{r}
+# use sample() to randomise the order
+opts_ci <- sample(c(
+  answer = "if you repeated the process many times, 95% of intervals calculated in this way contain the true mean",
+  "there is a 95% probability that the true mean lies within this range",
+  "95% of the data fall within this range"
+))
+```
+
+`r longmcq(opts_ci)`
+
+## Checked sections
+
+Create sections with the class `webex-check` to add a button that hides
+feedback until it is pressed. Add the class `webex-box` to draw a box
+around the section (or use your own styles).
+
+::: {.webex-check .webex-box}
+I am going to learn a lot: `r torf(TRUE)`
+
+```{r, results='asis'}
+opts <- c(
+   "the probability that the null hypothesis is true",
+   answer = "the probability of the observed, or more extreme, data, under the assumption that the null-hypothesis is true",
+   "the probability of making an error in your conclusion"
+)
+
+cat("What is a p-value?", longmcq(opts))
+```
+:::
+
+## Hidden solutions and hints
+
+You can fence off a solution area that will be hidden behind a button
+using `hide()` before the solution and `unhide()` after, each as inline
+R code. Pass the text you want to appear on the button to the `hide()`
+function.
+
+If the solution is a code chunk, instead of using `hide()` and
+`unhide()`, simply set the `webex.hide` chunk option to TRUE, or set it
+to the string you wish to display on the button.
+
+**Recreate the scatterplot below, using the built-in `cars` dataset.**
+
+```{r}
+with(cars, plot(speed, dist))
+```
+
+`r hide("I need a hint")`
+
+See the documentation for `plot()` (`?plot`)
+
+`r unhide()`
+
+<!-- note: you could also just set webex.hide to TRUE -->
+
+```{r, echo = TRUE, eval = FALSE}
+#| webex.hide: "Click here to see the solution"
+plot(cars$speed, cars$dist)
+```
+
+---
+title: "Psychology of Deception: Web Exercises"
+---
+
+```{r, echo = FALSE, results='asis'}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+This set of exercises will test your knowledge about various aspects of
+deception in psychology. Answer the questions to check your
+understanding of key concepts, theories, and research findings in this
+area.
+
+## Fill-In-The-Blanks
+
+1.  The tendency for people to believe they are less likely to be
+    deceived than others is known as the
+    `r fitb(c("illusion of invulnerability", "invulnerability illusion"), ignore_case = TRUE)`
+    to deception.
+
+2.  In deception research, the
+    `r fitb("confederate", ignore_case = TRUE)` is an actor who works
+    with the experimenter to deceive the actual participant.
+
+3.  The `r fitb(c("Duchenne smile", "Duchenne"), ignore_case = TRUE)` is
+    a genuine smile that involves both the mouth and the eyes, making it
+    harder to fake in deceptive situations.
+
+## Multiple Choice
+
+1.  Which of the following is NOT typically considered a reliable
+    indicator of deception?
+
+`r mcq(c("Increased blinking", "Reduced hand gestures", answer = "Lack of eye contact", "Increased speech errors"))`
+
+2.  The theory that proposes that lying is more cognitively demanding
+    than telling the truth is called:
+
+`r mcq(c("Interpersonal Deception Theory", answer = "Cognitive Load Theory", "Four-Factor Theory", "Self-Presentation Theory"))`
+
+3.  In a typical deception study, who is usually unaware of the true
+    nature of the experiment?
+
+`r mcq(c(answer = "Participant", "Experimenter", "Confederate", "Research Assistant"))`
+
+## True or False
+
+1.  Polygraph tests are highly accurate and widely accepted in
+    scientific communities as reliable lie detectors. `r torf(FALSE)`
+
+2.  People are generally better at detecting lies told by strangers than
+    by those close to them. `r torf(FALSE)`
+
+3.  Microexpressions are brief, involuntary facial expressions that can
+    potentially reveal concealed emotions in deceptive situations.
+    `r torf(TRUE)`
+
+## Longer MCQs
+
+**Which of the following best describes the "Truth-Default Theory" in
+deception research?**
+
+```{r}
+opts_tdt <- c(
+   "The theory that humans are naturally inclined to always tell the truth",
+   answer = "The theory that humans tend to believe others are telling the truth unless given reason to think otherwise",
+   "The theory that truth-telling is easier and requires less cognitive effort than lying",
+   "The theory that cultural norms universally prioritize truthfulness over deception"
+)
+```
+
+`r longmcq(opts_tdt)`
+
+**What is the primary focus of Interpersonal Deception Theory (IDT)?**
+
+```{r}
+opts_idt <- sample(c(
+  answer = "The dynamic interaction between the deceiver and the target of deception",
+  "The psychological motivations that drive individuals to engage in deceptive behavior",
+  "The neurological processes involved in creating and maintaining a lie",
+  "The cultural variations in perceptions and acceptance of deceptive practices"
+))
+```
+
+`r longmcq(opts_idt)`
+
+## Checked sections
+
+::: {.webex-check .webex-box}
+Research suggests that detecting deception is:
+
+`r mcq(c("Easy for most people", "Only possible with specialized training", answer = "Difficult, with accuracy rates often only slightly above chance", "Impossible without technological aids"))`
+
+Explain why detecting deception is challenging for most people:
+
+`r hide("Click for explanation")`
+
+Detecting deception is challenging for several reasons:
+
+1.  Many common beliefs about deception cues (e.g., lack of eye contact)
+    are not reliable indicators.
+2.  Liars often strategically control their behavior to appear truthful.
+3.  Individual differences in baseline behavior make it hard to identify
+    deviations.
+4.  The cognitive load of trying to detect lies can impair judgment.
+5.  Confirmation bias can lead people to interpret ambiguous cues in
+    line with their expectations.
+
+`r unhide()`
+:::
+
+## Hidden solutions and hints
+
+**A researcher wants to study how cognitive load affects lying behavior.
+Describe a potential experimental design to investigate this.**
+
+`r hide("I need a hint")`
+
+Consider how you might manipulate cognitive load (e.g., through a
+secondary task) and measure lying behavior. Think about what control
+conditions you might need.
+
+`r unhide()`
+
+```{r, echo = TRUE, eval = FALSE}
+#| webex.hide: "Click here to see a possible experimental design"
+# Possible Experimental Design:
+
+# Participants: 100 adults randomly assigned to two groups (50 each)
+# 
+# Procedure:
+# 1. All participants are asked to lie about a recent experience
+# 
+# 2. Experimental group: 
+#    - Must count backwards from 100 by 7s while lying (high cognitive load)
+# 
+# 3. Control group:
+#    - Simply lie without additional task (normal cognitive load)
+# 
+# 4. Measure dependent variables:
+#    - Speech hesitations
+#    - Speech rate
+#    - Amount of detail provided
+#    - Perceived believability (rated by independent judges)
+# 
+# 5. Compare measures between groups to assess the effect of cognitive load on lying behavior
+
+# This design allows us to isolate the effect of increased cognitive load on various aspects of lying behavior.
+```
+
+This set of exercises covers various aspects of deception psychology,
+including theories, research methods, and key findings. It utilizes
+different question types to engage learners and test their understanding
+of the subject matter.

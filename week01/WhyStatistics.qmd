@@ -1,0 +1,6 @@
+---
+title: WhyStatistics (Week Link)
+format: html
+---
+
+Please read [WhyStatistics](../textbook/01-WhyStatistics.qmd)

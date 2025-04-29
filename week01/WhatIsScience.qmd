@@ -1,0 +1,6 @@
+---
+title: WhatIsScience (Week Link)
+format: html
+---
+
+Please read [WhatIsScience](../textbook/01-WhatIsScience.qmd)

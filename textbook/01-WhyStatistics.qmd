@@ -1,0 +1,9 @@
+---
+title: WhyStatistics
+format: html
+---
+
+## WhyStatistics
+
+- Stats logic
+- Inference

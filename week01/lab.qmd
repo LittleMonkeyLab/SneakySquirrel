@@ -1,0 +1,6 @@
+---
+title: Lab
+format: html
+---
+
+<iframe src="lab_slides.html" width="100%" height="800px" frameborder="0" allowfullscreen></iframe>
