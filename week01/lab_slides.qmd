@@ -1,8 +1,34 @@
 ---
 title: Lab Slides
-format: revealjs
+format: 
+  revealjs:
+    embed-resources: true
 ---
 
 ## Week 01 Lab
 
 - Practice time
+
+## Custom Call-out
+
+::: {.callout-tip}
+Here’s a worked example illustrating a random intercept model.
+:::
+
+::: {.callout-note}
+This is a callout 'NOTE'
+:::
+
+::: {.callout-warning}
+What changes if random slopes are included in the model?
+:::
+
+::: {.callout-important}
+This is an insight block using custom CSS.
+:::
+
+## Initial slide
+Body Content
+
+## Secondary Slide
+Body content

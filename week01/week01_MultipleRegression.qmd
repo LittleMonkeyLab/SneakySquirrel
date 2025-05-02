@@ -1,0 +1,129 @@
+---
+title: "Lab Worksheet: Multiple Regression (Part 1)"
+author: "PS53011C/PS71020E"
+format: html
+---
+
+# PS53011C/PS71020E Lab Worksheet
+
+## Week 4: Multiple Regression (Part 1)
+
+> Please attempt all questions in your own words. Model answers will be available on the VLE page following the lab session.
+
+---
+
+## Learning Outcomes
+
+1. Conduct simple and multiple linear regression analyses using R and the Tidyverse.
+2. Explore relationships between regression coefficients and correlation measures.
+3. Assess assumptions of linear regression including normality, linearity, and multicollinearity.
+4. Compute and interpret simple, partial, and semipartial correlations in R.
+
+---
+
+## Materials
+
+- **Software**: R (Tidyverse package)
+- **Dataset**: [Download week4_fearful_faces.csv](downloadthis::data/fearful_faces.csv)
+
+```{r}
+#| label: load-libraries
+#| message: false
+#| warning: false
+library(tidyverse)
+```
+
+---
+
+## Dataset Overview
+
+The dataset includes reaction time (RT) data for participants responding to emotional facial expressions. Of particular interest is the average RT to fearful faces for correct identifications. Predictors include:
+
+- `traitanx`: Trait anxiety (Spielberger scale)
+- `ACS`: Attentional Control Scale score
+- `age`: Participant age
+
+---
+
+## Task 1: Descriptive Statistics and Visualisation
+
+- Load the dataset
+- Create summary statistics and visualizations for RT, traitanx, ACS, and age.
+
+```{r}
+#| label: descriptives
+fearful_data <- read_csv("data/fearful_faces.csv")
+
+fearful_data %>%
+  summarise(across(c(RT, traitanx, ACS, age), list(mean = mean, sd = sd), na.rm = TRUE))
+
+fearful_data %>%
+  pivot_longer(cols = c(RT, traitanx, ACS, age), names_to = "variable", values_to = "value") %>%
+  ggplot(aes(x = value)) +
+  geom_histogram(bins = 30, fill = "steelblue", color = "white") +
+  facet_wrap(~ variable, scales = "free") +
+  theme_minimal()
+```
+
+---
+
+## Task 2: Correlation Analysis
+
+- Compute a correlation matrix
+- Visualize relationships using scatterplots
+
+```{r}
+#| label: correlations
+fearful_data %>%
+  select(RT, traitanx, ACS, age) %>%
+  cor(use = "complete.obs") %>%
+  round(2)
+
+pairs(fearful_data %>% select(RT, traitanx, ACS, age), main = "Scatterplot Matrix")
+```
+
+---
+
+## Task 3: Multiple Regression
+
+- Conduct a multiple regression predicting RT from traitanx, ACS, and age.
+
+```{r}
+#| label: regression-model
+model <- lm(RT ~ traitanx + ACS + age, data = fearful_data)
+summary(model)
+```
+
+---
+
+## Task 4: Model Diagnostics
+
+- Check linear regression assumptions.
+
+```{r}
+#| label: diagnostics
+par(mfrow = c(2, 2))
+plot(model)
+```
+
+---
+
+## Task 5: Partial and Semipartial Correlations
+
+```{r}
+#| label: part-corr
+library(ppcor)
+pcor_result <- pcor(fearful_data %>% select(RT, traitanx, ACS, age), method = "pearson")
+pcor_result
+```
+
+---
+
+## Reflection
+
+- How does anxiety influence reaction time to fearful faces?
+- Does attentional control modify this relationship?
+- Are the findings specific to fearful stimuli, or would they generalize to other emotional expressions?
+
+> Review your code and interpretations. Cross-reference with theoretical models on anxiety and attentional control.
+

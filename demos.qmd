@@ -1,6 +1,9 @@
 ---
 title: "Demonstrations"
 subtitle: Demonstrations of stuff
+format: 
+  pdf: default
+
 ---
 
 Here is a demo of web-r
@@ -12,4 +15,23 @@ Here is a demo of webexercises
 Here is a demo of a download button
 [downloadthis demo](downloadthis.qmd)
 
+Here is a demo of a Countdown timer
 
+::: {.content-visible when-format="html"}
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html"}
+countdown::countdown(
+  minutes = 5,
+  play_sound = TRUE,
+  color_border              = "#FFFFFF",
+  color_text                = "#7aa81e",
+  color_running_background  = "#7aa81e",
+  color_running_text        = "#FFFFFF",
+  color_finished_background = "#ffa07a",
+  color_finished_text       = "#FFFFFF",
+  font_size = "2em"
+)
+```
+
+:::
+
+## another

@@ -6,7 +6,6 @@ format:
     code-tools: true
     code-fold: true
     code-annotations: hover
-    title-block-banner: true
 
 filters: 
   - webr
@@ -15,12 +14,36 @@ execute:
   warning: false
 ---
 
+```{r}
+library(downloadthis)
+```
+
 ## What a terrific Website
 
 and this is some sparkling content.
 
 How could I possibly download the data you mention?
 
-{{< downloadthis data/lab01.pdf dname=LAB01 label="Download the lab pdf" icon=file-earmark-pdf type=success >}}
+{{< downloadthis downloads/lab01.pdf dname=LAB01 label="Download the lab pdf" icon=file-earmark-pdf type=success >}}
 
 There you go, mydude!
+
+{{< downloadthis downloads/lab01.pdf dname=Mtcars label="Download the mtcars data" icon=database-fill-down type=info class=data-button id=mtcars >}}
+
+{{< downloadthis downloads/lab01.pdf >}}
+
+{{< downloadthis downloads/lab01.pdf class=styled id=btn1 >}} and {{< downloadthis downloads/lab01.pdf class=styled id=btn2 >}}
+
+::: {.tip}
+In the foundations of inference chapters, we have provided three different methods for statistical inference.
+We will continue to build on all three of the methods throughout the text, and by the end, you should have an understanding of the similarities and differences between them.
+Meanwhile, it is important to note that the methods are designed to mimic variability with data, and we know that variability can come from different sources (e.g., random sampling vs. random allocation, see @fig-randsampValloc).
+In @tbl-foundations-summary, we have summarized some of the ways the inferential procedures feature specific sources of variability.
+We hope that you refer back to the table often as you dive more deeply into inferential ideas in future chapters.
+:::
+
+::: {.tip data-latex=""}
+**Discernibility levels should reflect consequences of errors.**
+
+The discernibility level selected for a test should reflect the real-world consequences associated with making a Type I or Type II error.
+:::

@@ -4,6 +4,7 @@ title: "Webexercises"
 
 ```{r, echo = FALSE, results='asis'}
 knitr::opts_chunk$set(echo = FALSE)
+library("webexercises")
 
 # Uncomment to change widget colours:
 #style_widgets(incorrect = "goldenrod", correct = "purple", highlight = "firebrick")
@@ -162,9 +163,7 @@ See the documentation for `plot()` (`?plot`)
 plot(cars$speed, cars$dist)
 ```
 
----
-title: "Psychology of Deception: Web Exercises"
----
+## Deception Example Quiz
 
 ```{r, echo = FALSE, results='asis'}
 knitr::opts_chunk$set(echo = FALSE)

@@ -1,8 +1,28 @@
 ---
 title: Lecture Slides
+subtitle: Week-01
 format: revealjs
 ---
 
 ## Week 01 Lecture
 
 - Key concepts
+
+
+
+
+```{r}
+countdown::countdown(
+  minutes = 5,
+  # left = 0, right = 0,
+  # Fanfare when it's over
+  play_sound = TRUE,
+  color_border              = "#FFFFFF",
+  color_text                = "#7aa81e",
+  color_running_background  = "#7aa81e",
+  color_running_text        = "#FFFFFF",
+  color_finished_background = "#ffa07a",
+  color_finished_text       = "#FFFFFF",
+  font_size = "2em",
+  )
+```  

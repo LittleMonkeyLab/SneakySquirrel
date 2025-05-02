@@ -1,0 +1,31 @@
+## Task 6: Semipartial (Part) Correlation
+
+> This task explores how to isolate the unique contribution of one predictor (e.g., trait anxiety) to a dependent variable (reaction time), controlling for other variables only in the predictor.
+
+### Objective
+- Calculate a semipartial correlation between `Fearful_face_RT` and `traitanx`, controlling for `ACS` and `Age` **only in the predictor**.
+
+```{r}
+#| label: semipartial-correlation
+#| message: false
+#| warning: false
+
+# Load tidyverse if not already
+library(tidyverse)
+
+# Ensure your data is clean
+semipartial_data <- fearful_data %>%
+  select(Fearful_face_RT, traitanx, ACS, Age) %>%
+  drop_na()
+
+# Step 1: Residualize the predictor (traitanx ~ ACS + Age)
+resid_traitanx <- lm(traitanx ~ ACS + Age, data = semipartial_data)$residuals
+
+# Step 2: Compute correlation between raw DV and residualized predictor
+semipartial_corr <- cor(semipartial_data$Fearful_face_RT, resid_traitanx)
+semipartial_corr
+```
+
+::: {.callout-tip}
+**Interpretation:** This semipartial correlation represents the unique association between trait anxiety and fearful face reaction time, controlling for ACS and Age **only in trait anxiety**. Unlike partial correlation, it leaves the DV unadjusted.
+:::
