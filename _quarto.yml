@@ -5,13 +5,7 @@ book:
   title: "GS_ResMeth_DemoBook"
   author: "Dr. Gordon Wright and the gang"
   date: "4/29/2025"
-  page-footer: 
-    left: "Copyright 2021, Norah Jones" 
-    right: 
-      - icon: github
-        href: https://github.com/
-      - icon: twitter 
-        href: https://twitter.com/ 
+
   chapters:
     - index.qmd
     - intro.qmd
@@ -63,38 +57,23 @@ bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
-    code-copy: hover
-    css: include/webex.css
-    include-after-body: include/webex.js
-    mainfont: "Atkinson Hyperlegible"
-    monofont: "Fira Code"
+    theme: 
+      light: [cosmo, include/gs_rm.scss, include/webex.css, include/webex.js]
+    code-link: true
+    mainfont: Atkinson Hyperlegible
+    monofont: Source Code Pro
     toc: true
-    link-external-newwindow: false
-    link-external-icon: false
-    theme-dark: styles/dark.scss
-    theme-light: 
-      - styles/light.scss
-      - styles/debug.scss
-    callout-appearance: simple
-    callout-icon: true
-    callout-title: true
-    callout-custom:
-      - example
-      - question
-      - insight
-  revealjs: default
+    toc-depth: 2
   pdf:
-    documentclass: scrreprt
+    mainfont: "Atkinson Hyperlegible"
+    callout-appearance: simple
     include-in-header: 
-    include-in-header:
-      - include/preamble.tex 
-      text: |
-        \usepackage{makeidx}
-        \makeindex[intoc=true, columns=3, columnseprule=true]
-    include-after-body: 
-      text: |
-        \printindex
+      - include/gs_rm.tex
+    filters: 
+      - include/gs_rm.lua
+    keep-tex: true
+    
+
 
 
   

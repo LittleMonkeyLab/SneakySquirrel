@@ -1,0 +1,1674 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrreprt}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+    \setmainfont[]{Atkinson Hyperlegible}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{listings, breakable, skins}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{fontspec}
+
+% Set Atkinson Hyperlegible as main font
+\setmainfont{Atkinson Hyperlegible}
+
+\tcbset{
+  gsbox/.style={
+    enhanced,
+    sharp corners,
+    breakable,
+    colback=white,
+    colframe=black,
+    fonttitle=\bfseries,
+    before skip=10pt,
+    after skip=10pt,
+    boxrule=0.8pt,
+    left=10pt,
+    right=10pt,
+    top=5pt,
+    bottom=5pt
+  }
+}
+
+\newtcolorbox{gslearningoutcome}[1][]{gsbox, title=\faBook\quad Learning Outcomes, colframe=orange!70!black, colback=orange!5, #1}
+\newtcolorbox{gsactivity}[1][]{gsbox, title=\faBolt\quad Activity, colframe=cyan!70!black, colback=cyan!5, #1}
+\newtcolorbox{gswebexercise}[1][]{gsbox, title=\faKeyboard\quad Web Exercise, colframe=teal!70!black, colback=teal!5, #1}
+\newtcolorbox{gsglossary}[1][]{gsbox, title=\faBookOpen\quad Glossary, colframe=yellow!70!black, colback=yellow!10, #1}
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\makeatother
+
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={GS\_ResMeth\_DemoBook},
+  pdfauthor={Dr.~Gordon Wright and the gang},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{GS\_ResMeth\_DemoBook}
+\author{Dr.~Gordon Wright and the gang}
+\date{2025-04-29}
+
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{Table of contents}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Preface}\label{preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+\markboth{Preface}{Preface}
+
+This is a Quarto book.
+
+\faIcon{thumbs-up}
+
+\faIcon{folder}
+
+\faIcon{chess-pawn}
+
+\faIcon{bluetooth}
+
+\begin{gslearningoutcome}
+
+\begin{itemize}
+\tightlist
+\item
+  Understand partial and semipartial correlation
+\item
+  Use multiple regression with interpretation
+\end{itemize}
+
+\end{gslearningoutcome}
+
+More content
+
+\begin{gsactivity}
+
+\textbf{Activity}
+
+Explore the relationship between anxiety and reaction time using
+regression analysis.
+
+\end{gsactivity}
+
+More content
+
+\begin{gslearningoutcome}
+
+\textbf{Learning Outcomes}
+
+\begin{itemize}
+\tightlist
+\item
+  Understand partial and semipartial correlation\\
+\item
+  Use multiple regression with interpretation
+\end{itemize}
+
+\end{gslearningoutcome}
+
+More content
+
+\begin{gswebexercise}
+
+\textbf{Web Exercise}
+
+Use the \href{https://webr.r-wasm.org/}{WebR console} to rerun the
+regression with a different outcome variable.
+
+\end{gswebexercise}
+
+More content
+
+\begin{gsglossary}
+
+\textbf{Glossary}
+
+\textbf{Multicollinearity}: A statistical phenomenon where two or more
+predictors in a model are highly correlated.
+
+\end{gsglossary}
+
+say (\textbf{Student1908?})
+
+\bookmarksetup{startatroot}
+
+\chapter{Introduction}\label{introduction}
+
+This is a book created from markdown and executable code.
+
+See Knuth (1984) for additional discussion of literate programming.
+
+\bookmarksetup{startatroot}
+
+\chapter{Demonstrations}\label{demonstrations}
+
+Demonstrations of stuff
+
+\hfill\break
+
+Here is a demo of web-r \href{webr.qmd}{web-r demo}
+
+Here is a demo of webexercises \href{webexercises.qmd}{webexercises
+demo}
+
+Here is a demo of a download button \href{downloadthis.qmd}{downloadthis
+demo}
+
+Here is a demo of a Countdown timer
+
+\section{another}\label{another}
+
+\bookmarksetup{startatroot}
+
+\chapter{Summary}\label{summary}
+
+In summary, this book has no content whatsoever.
+
+\bookmarksetup{startatroot}
+
+\chapter{Webexercises}\label{webexercises}
+
+This is a Web Exercise template created by the
+\href{http://www.psy.gla.ac.uk}{psychology teaching team at the
+University of Glasgow}, based on ideas from
+\href{https://software-carpentry.org/lessons/}{Software Carpentry}. This
+template shows how instructors can easily create interactive web
+documents that students can use in self-guided learning.
+
+The \texttt{\{webexercises\}} package provides a number of functions
+that you use in
+\href{https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf}{inline
+R code} or through code chunk options to create HTML widgets (text
+boxes, pull down menus, buttons that reveal hidden content). Examples
+are given below. Render this file to HTML to see how it works.
+
+\textbf{NOTE: To use the widgets in the compiled HTML file, you need to
+have a JavaScript-enabled browser.}
+
+\section{Example Questions}\label{example-questions}
+
+\subsection{\texorpdfstring{Fill-In-The-Blanks
+(\texttt{fitb()})}{Fill-In-The-Blanks (fitb())}}\label{fill-in-the-blanks-fitb}
+
+Create fill-in-the-blank questions using \texttt{fitb()}, providing the
+answer as the first argument.
+
+\begin{itemize}
+\tightlist
+\item
+  2 + 2 is \_
+\end{itemize}
+
+You can also create these questions dynamically, using variables from
+your R session.
+
+\begin{itemize}
+\tightlist
+\item
+  The square root of 25 is: \_
+\end{itemize}
+
+The blanks are case-sensitive; if you don't care about case, use the
+argument \texttt{ignore\_case\ =\ TRUE}.
+
+\begin{itemize}
+\tightlist
+\item
+  What is the letter after D? \_
+\end{itemize}
+
+If you want to ignore differences in whitespace use, use the argument
+\texttt{ignore\_ws\ =\ TRUE} (which is the default) and include spaces
+in your answer anywhere they could be acceptable.
+
+\begin{itemize}
+\tightlist
+\item
+  How do you load the tidyverse package?
+  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\end{itemize}
+
+You can set more than one possible correct answer by setting the answers
+as a vector.
+
+\begin{itemize}
+\tightlist
+\item
+  Type a vowel: \_
+\end{itemize}
+
+You can use regular expressions to test answers against more complex
+rules.
+
+\begin{itemize}
+\tightlist
+\item
+  Type any 3 letters: \_\_\_
+\end{itemize}
+
+\subsection{\texorpdfstring{Multiple Choice
+(\texttt{mcq()})}{Multiple Choice (mcq())}}\label{multiple-choice-mcq}
+
+\begin{itemize}
+\item
+  ``Never gonna give you up, never gonna:
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \tightlist
+  \item
+    let you go\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    turn you down\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{2}
+  \tightlist
+  \item
+    run away\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{3}
+  \tightlist
+  \item
+    let you down
+  \end{enumerate}
+\end{itemize}
+
+'' - ``I
+
+\begin{itemize}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \tightlist
+  \item
+    bless the rains\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    guess it rains\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{2}
+  \tightlist
+  \item
+    sense the rain
+  \end{enumerate}
+
+  down in Africa'' -Toto
+\end{itemize}
+
+\subsection{\texorpdfstring{True or False
+(\texttt{torf()})}{True or False (torf())}}\label{true-or-false-torf}
+
+\begin{itemize}
+\tightlist
+\item
+  True or False? You can permute values in a vector using
+  \texttt{sample()}. TRUE / FALSE
+\end{itemize}
+
+\subsection{\texorpdfstring{Longer MCQs
+(\texttt{longmcq()})}{Longer MCQs (longmcq())}}\label{longer-mcqs-longmcq}
+
+When your answers are very long, sometimes a drop-down select box gets
+formatted oddly. You can use \texttt{longmcq()} to deal with this. Since
+the answers are long, It's probably best to set up the options inside an
+R chunk with \texttt{echo=FALSE}.
+
+\textbf{What is a p-value?}
+
+\begin{itemize}
+\tightlist
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \tightlist
+  \item
+    the probability that the null hypothesis is true\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    the probability of the observed, or more extreme, data, under the
+    assumption that the null-hypothesis is true\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{2}
+  \tightlist
+  \item
+    the probability of making an error in your conclusion
+  \end{enumerate}
+\end{itemize}
+
+\textbf{What is true about a 95\% confidence interval of the mean?}
+
+\begin{itemize}
+\tightlist
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \tightlist
+  \item
+    95\% of the data fall within this range\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    if you repeated the process many times, 95\% of intervals calculated
+    in this way contain the true mean\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{2}
+  \tightlist
+  \item
+    there is a 95\% probability that the true mean lies within this
+    range
+  \end{enumerate}
+\end{itemize}
+
+\section{Checked sections}\label{checked-sections}
+
+Create sections with the class \texttt{webex-check} to add a button that
+hides feedback until it is pressed. Add the class \texttt{webex-box} to
+draw a box around the section (or use your own styles).
+
+I am going to learn a lot: TRUE / FALSE
+
+What is a p-value?
+
+\begin{itemize}
+\tightlist
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \tightlist
+  \item
+    the probability that the null hypothesis is true\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    the probability of the observed, or more extreme, data, under the
+    assumption that the null-hypothesis is true\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{2}
+  \tightlist
+  \item
+    the probability of making an error in your conclusion
+  \end{enumerate}
+\end{itemize}
+
+\section{Hidden solutions and hints}\label{hidden-solutions-and-hints}
+
+You can fence off a solution area that will be hidden behind a button
+using \texttt{hide()} before the solution and \texttt{unhide()} after,
+each as inline R code. Pass the text you want to appear on the button to
+the \texttt{hide()} function.
+
+If the solution is a code chunk, instead of using \texttt{hide()} and
+\texttt{unhide()}, simply set the \texttt{webex.hide} chunk option to
+TRUE, or set it to the string you wish to display on the button.
+
+\textbf{Recreate the scatterplot below, using the built-in \texttt{cars}
+dataset.}
+
+\pandocbounded{\includegraphics[keepaspectratio]{webexercises_files/figure-pdf/unnamed-chunk-6-1.pdf}}
+
+I need a hint
+
+See the documentation for \texttt{plot()} (\texttt{?plot})
+
+Click here to see the solution
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(cars}\SpecialCharTok{$}\NormalTok{speed, cars}\SpecialCharTok{$}\NormalTok{dist)}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Deception Example Quiz}\label{deception-example-quiz}
+
+This set of exercises will test your knowledge about various aspects of
+deception in psychology. Answer the questions to check your
+understanding of key concepts, theories, and research findings in this
+area.
+
+\section{Fill-In-The-Blanks}\label{fill-in-the-blanks}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  The tendency for people to believe they are less likely to be deceived
+  than others is known as the
+  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ to deception.
+\item
+  In deception research, the \_\_\_\_\_\_\_\_\_\_\_ is an actor who
+  works with the experimenter to deceive the actual participant.
+\item
+  The \_\_\_\_\_\_\_\_\_\_\_\_\_\_ is a genuine smile that involves both
+  the mouth and the eyes, making it harder to fake in deceptive
+  situations.
+\end{enumerate}
+
+\section{Multiple Choice}\label{multiple-choice}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Which of the following is NOT typically considered a reliable
+  indicator of deception?
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \tightlist
+  \item
+    Increased blinking\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    Reduced hand gestures\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{2}
+  \tightlist
+  \item
+    Lack of eye contact\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{3}
+  \tightlist
+  \item
+    Increased speech errors
+  \end{enumerate}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  The theory that proposes that lying is more cognitively demanding than
+  telling the truth is called:
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \tightlist
+  \item
+    Interpersonal Deception Theory\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    Cognitive Load Theory\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{2}
+  \tightlist
+  \item
+    Four-Factor Theory\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{3}
+  \tightlist
+  \item
+    Self-Presentation Theory
+  \end{enumerate}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  In a typical deception study, who is usually unaware of the true
+  nature of the experiment?
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \tightlist
+  \item
+    Participant\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    Experimenter\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{2}
+  \tightlist
+  \item
+    Confederate\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{3}
+  \tightlist
+  \item
+    Research Assistant
+  \end{enumerate}
+\end{itemize}
+
+\section{True or False}\label{true-or-false}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Polygraph tests are highly accurate and widely accepted in scientific
+  communities as reliable lie detectors. TRUE / FALSE
+\item
+  People are generally better at detecting lies told by strangers than
+  by those close to them. TRUE / FALSE
+\item
+  Microexpressions are brief, involuntary facial expressions that can
+  potentially reveal concealed emotions in deceptive situations. TRUE /
+  FALSE
+\end{enumerate}
+
+\section{Longer MCQs}\label{longer-mcqs}
+
+\textbf{Which of the following best describes the ``Truth-Default
+Theory'' in deception research?}
+
+\begin{itemize}
+\tightlist
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \tightlist
+  \item
+    The theory that humans are naturally inclined to always tell the
+    truth\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    The theory that humans tend to believe others are telling the truth
+    unless given reason to think otherwise\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{2}
+  \tightlist
+  \item
+    The theory that truth-telling is easier and requires less cognitive
+    effort than lying\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{3}
+  \tightlist
+  \item
+    The theory that cultural norms universally prioritize truthfulness
+    over deception
+  \end{enumerate}
+\end{itemize}
+
+\textbf{What is the primary focus of Interpersonal Deception Theory
+(IDT)?}
+
+\begin{itemize}
+\tightlist
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \tightlist
+  \item
+    The dynamic interaction between the deceiver and the target of
+    deception\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    The cultural variations in perceptions and acceptance of deceptive
+    practices\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{2}
+  \tightlist
+  \item
+    The psychological motivations that drive individuals to engage in
+    deceptive behavior\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{3}
+  \tightlist
+  \item
+    The neurological processes involved in creating and maintaining a
+    lie
+  \end{enumerate}
+\end{itemize}
+
+\section{Checked sections}\label{checked-sections-1}
+
+Research suggests that detecting deception is:
+
+\begin{itemize}
+\tightlist
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \tightlist
+  \item
+    Easy for most people\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    Only possible with specialized training\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{2}
+  \tightlist
+  \item
+    Difficult, with accuracy rates often only slightly above chance\\
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\Alph{enumi})}
+  \setcounter{enumi}{3}
+  \tightlist
+  \item
+    Impossible without technological aids
+  \end{enumerate}
+\end{itemize}
+
+Explain why detecting deception is challenging for most people:
+
+Click for explanation
+
+Detecting deception is challenging for several reasons:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Many common beliefs about deception cues (e.g., lack of eye contact)
+  are not reliable indicators.
+\item
+  Liars often strategically control their behavior to appear truthful.
+\item
+  Individual differences in baseline behavior make it hard to identify
+  deviations.
+\item
+  The cognitive load of trying to detect lies can impair judgment.
+\item
+  Confirmation bias can lead people to interpret ambiguous cues in line
+  with their expectations.
+\end{enumerate}
+
+\section{Hidden solutions and hints}\label{hidden-solutions-and-hints-1}
+
+\textbf{A researcher wants to study how cognitive load affects lying
+behavior. Describe a potential experimental design to investigate this.}
+
+I need a hint
+
+Consider how you might manipulate cognitive load (e.g., through a
+secondary task) and measure lying behavior. Think about what control
+conditions you might need.
+
+Click here to see a possible experimental design
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Possible Experimental Design:}
+
+\CommentTok{\# Participants: 100 adults randomly assigned to two groups (50 each)}
+\CommentTok{\# }
+\CommentTok{\# Procedure:}
+\CommentTok{\# 1. All participants are asked to lie about a recent experience}
+\CommentTok{\# }
+\CommentTok{\# 2. Experimental group: }
+\CommentTok{\#    {-} Must count backwards from 100 by 7s while lying (high cognitive load)}
+\CommentTok{\# }
+\CommentTok{\# 3. Control group:}
+\CommentTok{\#    {-} Simply lie without additional task (normal cognitive load)}
+\CommentTok{\# }
+\CommentTok{\# 4. Measure dependent variables:}
+\CommentTok{\#    {-} Speech hesitations}
+\CommentTok{\#    {-} Speech rate}
+\CommentTok{\#    {-} Amount of detail provided}
+\CommentTok{\#    {-} Perceived believability (rated by independent judges)}
+\CommentTok{\# }
+\CommentTok{\# 5. Compare measures between groups to assess the effect of cognitive load on lying behavior}
+
+\CommentTok{\# This design allows us to isolate the effect of increased cognitive load on various aspects of lying behavior.}
+\end{Highlighting}
+\end{Shaded}
+
+This set of exercises covers various aspects of deception psychology,
+including theories, research methods, and key findings. It utilizes
+different question types to engage learners and test their understanding
+of the subject matter.
+
+\bookmarksetup{startatroot}
+
+\chapter{webR in Quarto HTML
+Documents}\label{webr-in-quarto-html-documents}
+
+Each class session has an interactive lesson that you will work through
+\textbf{\emph{after}} doing the readings and watching the lecture. These
+lessons are a central part of the class---they will teach you how to use
+\{ggplot2\} and other packages in the tidyverse to create beautiful and
+truthful visualizations with R.
+
+Interactive code sections look like this. Make changes in the text box
+and click on the green ``Run Code'' button to see the results. Sometimes
+there will be a tab with a hint or solution.
+
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, leftrule=.75mm, breakable, toprule=.15mm, arc=.35mm, rightrule=.15mm, colback=white, opacityback=0, bottomrule=.15mm, left=2mm]
+\begin{minipage}[t]{5.5mm}
+\textcolor{quarto-callout-important-color}{\faExclamation}
+\end{minipage}%
+\begin{minipage}[t]{\textwidth - 5.5mm}
+
+\vspace{-3mm}\textbf{Your turn}\vspace{3mm}
+
+Modify the code here to show the relationship between health and wealth
+for 2002 instead of 2007.
+
+\section{\texorpdfstring{\faIcon{code} Interactive
+editor}{ Interactive editor}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{gapminder\_filtered \textless{}{-} gapminder |\textgreater{}}
+\NormalTok{  filter(year == 2007)}
+
+\NormalTok{ggplot(data = gapminder\_filtered,}
+\NormalTok{       mapping = aes(x = gdpPercap, y = lifeExp, }
+\NormalTok{                     size = pop, color = continent)) +}
+\NormalTok{  geom\_point() + }
+\NormalTok{  scale\_x\_log10(labels = scales::dollar\_format(accuracy = 1)) +}
+\NormalTok{  scale\_size\_continuous(labels = scales::label\_comma()) +}
+\NormalTok{  scale\_color\_viridis\_d(option = "plasma") +}
+\NormalTok{  labs(x = "GDP per capita", y = "Life expectancy",}
+\NormalTok{       title = "Health and wealth are strongly related",}
+\NormalTok{       subtitle = "142 countries; 2007 only", caption = "Source: The Gapminder Project",}
+\NormalTok{       color = "Continent", size = "Population") +}
+\NormalTok{  theme\_bw()}
+\end{Highlighting}
+\end{Shaded}
+
+\section{\texorpdfstring{\faIcon{lightbulb} Hint}{ Hint}}
+
+\textbf{Hint:} You'll want to change something in the code that creates
+\texttt{gapminder\_filtered}. The text in the subtitle won't change
+automatically, so you'll want to edit that too.
+
+\end{minipage}%
+\end{tcolorbox}
+
+If you're curious how this works, each interactive code section uses
+\href{https://quarto-webr.thecoatlessprofessor.com/}{the amazing
+\{quarto-webr\} package} to run R directly in your browser.
+
+\bookmarksetup{startatroot}
+
+\chapter{DownloadThis Demo}\label{downloadthis-demo}
+
+How to download files and stuff
+
+\hfill\break
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(downloadthis)}
+\end{Highlighting}
+\end{Shaded}
+
+\section{What a terrific Website}\label{what-a-terrific-website}
+
+and this is some sparkling content.
+
+How could I possibly download the data you mention?
+
+There you go, mydude!
+
+and
+
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, breakable, toprule=.15mm, arc=.35mm, rightrule=.15mm, colback=white, opacityback=0, bottomrule=.15mm, left=2mm]
+\begin{minipage}[t]{5.5mm}
+\textcolor{quarto-callout-tip-color}{\faLightbulb}
+\end{minipage}%
+\begin{minipage}[t]{\textwidth - 5.5mm}
+
+In the foundations of inference chapters, we have provided three
+different methods for statistical inference. We will continue to build
+on all three of the methods throughout the text, and by the end, you
+should have an understanding of the similarities and differences between
+them. Meanwhile, it is important to note that the methods are designed
+to mimic variability with data, and we know that variability can come
+from different sources (e.g., random sampling vs.~random allocation, see
+\textbf{?@fig-randsampValloc}). In \textbf{?@tbl-foundations-summary},
+we have summarized some of the ways the inferential procedures feature
+specific sources of variability. We hope that you refer back to the
+table often as you dive more deeply into inferential ideas in future
+chapters.
+
+\end{minipage}%
+\end{tcolorbox}
+
+\bookmarksetup{startatroot}
+
+\chapter*{References}\label{references}
+\addcontentsline{toc}{chapter}{References}
+
+\markboth{References}{References}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-knuth84}
+Knuth, Donald E. 1984. \emph{The TeXbook}. Addison-Wesley.
+
+\end{CSLReferences}
+
+\part{Overview}
+
+\chapter*{Preface}\label{preface-1}
+\addcontentsline{toc}{chapter}{Preface}
+
+\markboth{Preface}{Preface}
+
+This is a Quarto book.
+
+\faIcon{thumbs-up}
+
+\faIcon{folder}
+
+\faIcon{chess-pawn}
+
+\faIcon{bluetooth}
+
+\begin{gslearningoutcome}
+
+\begin{itemize}
+\tightlist
+\item
+  Understand partial and semipartial correlation
+\item
+  Use multiple regression with interpretation
+\end{itemize}
+
+\end{gslearningoutcome}
+
+More content
+
+\begin{gsactivity}
+
+\textbf{Activity}
+
+Explore the relationship between anxiety and reaction time using
+regression analysis.
+
+\end{gsactivity}
+
+More content
+
+\begin{gslearningoutcome}
+
+\textbf{Learning Outcomes}
+
+\begin{itemize}
+\tightlist
+\item
+  Understand partial and semipartial correlation\\
+\item
+  Use multiple regression with interpretation
+\end{itemize}
+
+\end{gslearningoutcome}
+
+More content
+
+\begin{gswebexercise}
+
+\textbf{Web Exercise}
+
+Use the \href{https://webr.r-wasm.org/}{WebR console} to rerun the
+regression with a different outcome variable.
+
+\end{gswebexercise}
+
+More content
+
+\begin{gsglossary}
+
+\textbf{Glossary}
+
+\textbf{Multicollinearity}: A statistical phenomenon where two or more
+predictors in a model are highly correlated.
+
+\end{gsglossary}
+
+say (\textbf{Student1908?})
+
+\part{Week 01}
+
+\chapter{Lecture}\label{lecture}
+
+\chapter{PS53011C/PS71020E Lab
+Worksheet}\label{ps53011cps71020e-lab-worksheet}
+
+\subsection{📊 Lab Instructions}
+
+This week's lab will explore multiple regression using tidyverse
+principles!
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{📽️ Slides}
+
+\begin{quote}
+🧭 \textbf{These are your slides for the week!}
+
+Use the arrow keys to navigate through the slides:
+
+\begin{itemize}
+\tightlist
+\item
+  ⬅️ and ➡️ to move left and right
+\item
+  ⬆️ and ⬇️ for nested (vertical) slides
+\item
+  Press \texttt{Esc} to view the \textbf{slide overview}
+\item
+  Press \texttt{F} for \textbf{fullscreen} (or use browser controls)
+\item
+  Press \texttt{O} to toggle the \textbf{overview mode}
+\item
+  Press \texttt{S} to open the \textbf{Speaker Notes} window (in
+  presenter mode)
+\end{itemize}
+
+💡 Slides are best viewed in \textbf{fullscreen} for clarity.
+\end{quote}
+
+\section{Week 4: Multiple Regression (Part
+1)}\label{week-4-multiple-regression-part-1}
+
+\begin{quote}
+Please attempt all questions in your own words. Model answers will be
+available on the VLE page following the lab session.
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\phantomsection\label{sec-lab01-LO}
+\section{Learning Outcomes}\label{learning-outcomes}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Conduct simple and multiple linear regression analyses using R and the
+  Tidyverse.\\
+\item
+  Explore relationships between regression coefficients and correlation
+  measures.\\
+\item
+  Assess assumptions of linear regression including normality,
+  linearity, and multicollinearity.\\
+\item
+  Compute and interpret simple, partial, and semipartial correlations in
+  R.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Materials}\label{materials}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Software}: R (Tidyverse package)
+\item
+  \textbf{Dataset}:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Dataset Overview}\label{dataset-overview}
+
+The dataset includes reaction time (RT) data for participants responding
+to emotional facial expressions. Of particular interest is the average
+RT to fearful faces for correct identifications. Predictors include:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{traitanx}: Trait anxiety (Spielberger scale)
+\item
+  \texttt{ACS}: Attentional Control Scale score
+\item
+  \texttt{Age}: Participant age
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Task 1: Descriptive Statistics and
+Visualisation}\label{task-1-descriptive-statistics-and-visualisation}
+
+\begin{itemize}
+\tightlist
+\item
+  Load the dataset
+\item
+  Create summary statistics and visualizations for RT, traitanx, ACS,
+  and Age.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fearful\_data }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"data/fearful\_faces.csv"}\NormalTok{)}
+
+\NormalTok{fearful\_data }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\FunctionTok{across}\NormalTok{(}\FunctionTok{c}\NormalTok{(Fearful\_face\_RT, Happy\_face\_RT, traitanx, ACS, Age), }\FunctionTok{list}\NormalTok{(}\AttributeTok{mean =}\NormalTok{ mean, }\AttributeTok{sd =}\NormalTok{ sd), }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+# A tibble: 1 x 10
+  Fearful_face_RT_mean Fearful_face_RT_sd Happy_face_RT_mean Happy_face_RT_sd
+                 <dbl>              <dbl>              <dbl>            <dbl>
+1                0.491             0.0604              0.489           0.0600
+# i 6 more variables: traitanx_mean <dbl>, traitanx_sd <dbl>, ACS_mean <dbl>,
+#   ACS_sd <dbl>, Age_mean <dbl>, Age_sd <dbl>
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fearful\_data }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{pivot\_longer}\NormalTok{(}\AttributeTok{cols =} \FunctionTok{c}\NormalTok{(Fearful\_face\_RT, Happy\_face\_RT, traitanx, ACS, Age), }\AttributeTok{names\_to =} \StringTok{"variable"}\NormalTok{, }\AttributeTok{values\_to =} \StringTok{"value"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ value)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_histogram}\NormalTok{(}\AttributeTok{bins =} \DecValTok{30}\NormalTok{, }\AttributeTok{fill =} \StringTok{"steelblue"}\NormalTok{, }\AttributeTok{color =} \StringTok{"white"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{facet\_wrap}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{ variable, }\AttributeTok{scales =} \StringTok{"free"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\pandocbounded{\includegraphics[keepaspectratio]{week01/lab_files/figure-pdf/descriptives-1.pdf}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Task 2: Correlation
+Analysis}\label{task-2-correlation-analysis}
+
+\begin{itemize}
+\tightlist
+\item
+  Compute a correlation matrix
+\item
+  Visualize relationships using scatterplots
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fearful\_data }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(Fearful\_face\_RT, Happy\_face\_RT, traitanx, ACS, Age) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{cor}\NormalTok{(}\AttributeTok{use =} \StringTok{"complete.obs"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{round}\NormalTok{(}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+                Fearful_face_RT Happy_face_RT traitanx   ACS   Age
+Fearful_face_RT            1.00          0.96    -0.33  0.18  0.04
+Happy_face_RT              0.96          1.00    -0.37  0.14  0.02
+traitanx                  -0.33         -0.37     1.00 -0.36 -0.14
+ACS                        0.18          0.14    -0.36  1.00  0.36
+Age                        0.04          0.02    -0.14  0.36  1.00
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{pairs}\NormalTok{(fearful\_data }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(Fearful\_face\_RT, Happy\_face\_RT, traitanx, ACS, Age), }\AttributeTok{main =} \StringTok{"Scatterplot Matrix"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\pandocbounded{\includegraphics[keepaspectratio]{week01/lab_files/figure-pdf/correlations-1.pdf}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Task 3: Multiple Regression}\label{task-3-multiple-regression}
+
+\begin{itemize}
+\tightlist
+\item
+  Conduct a multiple regression predicting Fearful\_face\_RT from
+  traitanx, ACS, and Age.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{model }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(Fearful\_face\_RT }\SpecialCharTok{\textasciitilde{}}\NormalTok{ traitanx }\SpecialCharTok{+}\NormalTok{ ACS }\SpecialCharTok{+}\NormalTok{ Age, }\AttributeTok{data =}\NormalTok{ fearful\_data)}
+\FunctionTok{summary}\NormalTok{(model)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+
+Call:
+lm(formula = Fearful_face_RT ~ traitanx + ACS + Age, data = fearful_data)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.105742 -0.043660 -0.002261  0.044587  0.116670 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.5470081  0.0637205   8.584  1.9e-12 ***
+traitanx    -0.0018929  0.0007492  -2.527   0.0138 *  
+ACS          0.0005506  0.0009446   0.583   0.5619    
+Age         -0.0002299  0.0010605  -0.217   0.8290    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.05698 on 68 degrees of freedom
+  (17931 observations deleted due to missingness)
+Multiple R-squared:  0.1149,    Adjusted R-squared:  0.07587 
+F-statistic: 2.943 on 3 and 68 DF,  p-value: 0.0391
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Task 4: Model Diagnostics}\label{task-4-model-diagnostics}
+
+\begin{itemize}
+\tightlist
+\item
+  Check linear regression assumptions.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow =} \FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{2}\NormalTok{))}
+\FunctionTok{plot}\NormalTok{(model)}
+\end{Highlighting}
+\end{Shaded}
+
+\pandocbounded{\includegraphics[keepaspectratio]{week01/lab_files/figure-pdf/diagnostics-1.pdf}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Task 5: Partial and Semipartial
+Correlations}\label{task-5-partial-and-semipartial-correlations}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Load required libraries}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\FunctionTok{library}\NormalTok{(ppcor)}
+
+
+\CommentTok{\# Calculate partial correlations}
+\NormalTok{partial\_data }\OtherTok{\textless{}{-}}\NormalTok{ fearful\_data }\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  dplyr}\SpecialCharTok{::}\FunctionTok{select}\NormalTok{(Fearful\_face\_RT, traitanx, ACS, Age) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{drop\_na}\NormalTok{()}
+\NormalTok{pcor\_result }\OtherTok{\textless{}{-}} \FunctionTok{pcor}\NormalTok{(partial\_data, }\AttributeTok{method =} \StringTok{"pearson"}\NormalTok{)}
+\NormalTok{pcor\_result}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+$estimate
+                Fearful_face_RT    traitanx         ACS         Age
+Fearful_face_RT      1.00000000 -0.29295465  0.07051172 -0.02627832
+traitanx            -0.29295465  1.00000000 -0.29776049 -0.02300362
+ACS                  0.07051172 -0.29776049  1.00000000  0.33458467
+Age                 -0.02627832 -0.02300362  0.33458467  1.00000000
+
+$p.value
+                Fearful_face_RT   traitanx         ACS         Age
+Fearful_face_RT      0.00000000 0.01384887 0.561885102 0.829035513
+traitanx             0.01384887 0.00000000 0.012298804 0.850075844
+ACS                  0.56188510 0.01229880 0.000000000 0.004640019
+Age                  0.82903551 0.85007584 0.004640019 0.000000000
+
+$statistic
+                Fearful_face_RT   traitanx        ACS        Age
+Fearful_face_RT       0.0000000 -2.5266180  0.5829054 -0.2167714
+traitanx             -2.5266180  0.0000000 -2.5720632 -0.1897429
+ACS                   0.5829054 -2.5720632  0.0000000  2.9277975
+Age                  -0.2167714 -0.1897429  2.9277975  0.0000000
+
+$n
+[1] 72
+
+$gp
+[1] 2
+
+$method
+[1] "pearson"
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Task 6: Semipartial (Part)
+Correlation}\label{task-6-semipartial-part-correlation}
+
+\begin{quote}
+This task explores how to isolate the unique contribution of one
+predictor (e.g., trait anxiety) to a dependent variable (reaction time),
+controlling for other variables only in the predictor.
+\end{quote}
+
+\subsection{Objective}\label{objective}
+
+\begin{itemize}
+\tightlist
+\item
+  Calculate a semipartial correlation between \texttt{Fearful\_face\_RT}
+  and \texttt{traitanx}, controlling for \texttt{ACS} and \texttt{Age}
+  \textbf{only in the predictor}.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Load tidyverse if not already}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+
+\CommentTok{\# Ensure your data is clean}
+\NormalTok{semipartial\_data }\OtherTok{\textless{}{-}}\NormalTok{ fearful\_data }\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  dplyr}\SpecialCharTok{::}\FunctionTok{select}\NormalTok{(Fearful\_face\_RT, traitanx, ACS, Age) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{drop\_na}\NormalTok{()}
+
+\CommentTok{\# Step 1: Residualize the predictor (traitanx \textasciitilde{} ACS + Age)}
+\NormalTok{resid\_traitanx }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(traitanx }\SpecialCharTok{\textasciitilde{}}\NormalTok{ ACS }\SpecialCharTok{+}\NormalTok{ Age, }\AttributeTok{data =}\NormalTok{ semipartial\_data)}\SpecialCharTok{$}\NormalTok{residuals}
+
+\CommentTok{\# Step 2: Compute correlation between raw DV and residualized predictor}
+\NormalTok{semipartial\_corr }\OtherTok{\textless{}{-}} \FunctionTok{cor}\NormalTok{(semipartial\_data}\SpecialCharTok{$}\NormalTok{Fearful\_face\_RT, resid\_traitanx)}
+\NormalTok{semipartial\_corr}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] -0.2882545
+\end{verbatim}
+
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, leftrule=.75mm, breakable, toprule=.15mm, arc=.35mm, rightrule=.15mm, colback=white, opacityback=0, bottomrule=.15mm, left=2mm]
+\begin{minipage}[t]{5.5mm}
+\textcolor{quarto-callout-note-color}{\faInfo}
+\end{minipage}%
+\begin{minipage}[t]{\textwidth - 5.5mm}
+
+\textbf{Interpretation:} This semipartial correlation represents the
+unique association between trait anxiety and fearful face reaction time,
+controlling for ACS and Age \textbf{only in trait anxiety}. Unlike
+partial correlation, it leaves the DV unadjusted.
+
+\end{minipage}%
+\end{tcolorbox}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Reflection}\label{reflection}
+
+\begin{itemize}
+\tightlist
+\item
+  How does anxiety influence reaction time to fearful faces?
+\item
+  Does attentional control modify this relationship?
+\item
+  Are the findings specific to fearful stimuli, or would they generalize
+  to other emotional expressions?
+\end{itemize}
+
+\begin{quote}
+Review your code and interpretations. Cross-reference with theoretical
+models on anxiety and attentional control.
+\end{quote}
+
+\chapter*{Dataskillsintro}\label{dataskillsintro}
+\addcontentsline{toc}{chapter}{Dataskillsintro}
+
+\markboth{Dataskillsintro}{Dataskillsintro}
+
+\chapter{WhatIsScience (Week Link)}\label{whatisscience-week-link}
+
+Please read \href{../textbook/01-WhatIsScience.qmd}{WhatIsScience}
+
+\chapter{WhyStatistics (Week Link)}\label{whystatistics-week-link}
+
+Please read \href{../textbook/01-WhyStatistics.qmd}{WhyStatistics}
+
+
+
+
+\end{document}

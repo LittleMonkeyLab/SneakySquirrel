@@ -1,0 +1,31 @@
+\usepackage{tcolorbox}
+\tcbuselibrary{listings, breakable, skins}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{fontspec}
+
+% Set Atkinson Hyperlegible as main font
+\setmainfont{Atkinson Hyperlegible}
+
+\tcbset{
+  gsbox/.style={
+    enhanced,
+    sharp corners,
+    breakable,
+    colback=white,
+    colframe=black,
+    fonttitle=\bfseries,
+    before skip=10pt,
+    after skip=10pt,
+    boxrule=0.8pt,
+    left=10pt,
+    right=10pt,
+    top=5pt,
+    bottom=5pt
+  }
+}
+
+\newtcolorbox{gslearningoutcome}[1][]{gsbox, title=\faBook\quad Learning Outcomes, colframe=orange!70!black, colback=orange!5, #1}
+\newtcolorbox{gsactivity}[1][]{gsbox, title=\faBolt\quad Activity, colframe=cyan!70!black, colback=cyan!5, #1}
+\newtcolorbox{gswebexercise}[1][]{gsbox, title=\faKeyboard\quad Web Exercise, colframe=teal!70!black, colback=teal!5, #1}
+\newtcolorbox{gsglossary}[1][]{gsbox, title=\faBookOpen\quad Glossary, colframe=yellow!70!black, colback=yellow!10, #1}

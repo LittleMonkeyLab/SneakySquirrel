@@ -1,35 +1,72 @@
 ---
 title: PS53011C/PS71020E Lab Worksheet
-format: html
+format: 
+  html:
+    code-tools: true
+    code-overflow: wrap
+    code-annotations: hover
+    code-block-bg: true
+    code-block-border-left: true
+    toc: true
+    number-sections: true
+    df-print: kable
+
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
 ---
 
 ::: {.panel-tabset}
 
 ### 📊 Lab Instructions
 
-This week's lab will explore multiple regression using tidyverse principles.
+This week's lab will explore multiple regression using tidyverse principles!
 
 ---
 
 ### 📽️ Slides
 
-<iframe src="lab_slides.html" width="100%" height="600px" style="border: none;"></iframe>
+
+<div style="position: relative; padding-top: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="lab_slides.html" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+          allowfullscreen
+          loading="lazy">
+  </iframe>
+</div>
+
+> 🧭 **These are your slides for the week!**
+>
+> Use the arrow keys to navigate through the slides:
+>
+> - ⬅️ and ➡️ to move left and right
+> - ⬆️ and ⬇️ for nested (vertical) slides
+> - Press `Esc` to view the **slide overview**
+> - Press `F` for **fullscreen** (or use browser controls)
+> - Press `O` to toggle the **overview mode**
+> - Press `S` to open the **Speaker Notes** window (in presenter mode)
+>
+> 💡 Slides are best viewed in **fullscreen** for clarity.
 
 :::
 
-> 🧭 These are your slides for the week. Use the arrow keys to navigate.
+
 ## Week 4: Multiple Regression (Part 1)
 
 > Please attempt all questions in your own words. Model answers will be available on the VLE page following the lab session.
 
 ---
 
+::: {.learning-outcomes #sec-lab01-LO}
 ## Learning Outcomes
 
-1. Conduct simple and multiple linear regression analyses using R and the Tidyverse.
-2. Explore relationships between regression coefficients and correlation measures.
-3. Assess assumptions of linear regression including normality, linearity, and multicollinearity.
+1. Conduct simple and multiple linear regression analyses using R and the Tidyverse.  
+2. Explore relationships between regression coefficients and correlation measures.  
+3. Assess assumptions of linear regression including normality, linearity, and multicollinearity.  
 4. Compute and interpret simple, partial, and semipartial correlations in R.
+:::
 
 ---
 
@@ -170,7 +207,7 @@ semipartial_corr <- cor(semipartial_data$Fearful_face_RT, resid_traitanx)
 semipartial_corr
 ```
 
-::: {.callout-tip}
+::: {.callout-note}
 **Interpretation:** This semipartial correlation represents the unique association between trait anxiety and fearful face reaction time, controlling for ACS and Age **only in trait anxiety**. Unlike partial correlation, it leaves the DV unadjusted.
 :::
 

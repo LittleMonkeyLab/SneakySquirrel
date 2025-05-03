@@ -1,5 +1,51 @@
 # Preface {.unnumbered}
 
-This is a Quarto book Draft o1.
+This is a Quarto book.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+{{< fa thumbs-up >}}
+
+{{< fa folder >}}
+
+{{< fa chess-pawn >}}
+
+{{< fa brands bluetooth >}}
+
+::: {.gs-learning-outcome}
+- Understand partial and semipartial correlation
+- Use multiple regression with interpretation
+:::
+
+More content
+
+::: {.gs-activity}
+**Activity**
+
+Explore the relationship between anxiety and reaction time using regression analysis.
+:::
+
+More content
+
+::: {.gs-learning-outcome}
+**Learning Outcomes**
+
+- Understand partial and semipartial correlation  
+- Use multiple regression with interpretation
+:::
+
+More content
+
+::: {.gs-webexercise}
+**Web Exercise**
+
+Use the [WebR console](https://webr.r-wasm.org/) to rerun the regression with a different outcome variable.
+:::
+
+More content
+
+::: {.gs-glossary}
+**Glossary**
+
+**Multicollinearity**: A statistical phenomenon where two or more predictors in a model are highly correlated.
+:::
+
+say [@Student1908]

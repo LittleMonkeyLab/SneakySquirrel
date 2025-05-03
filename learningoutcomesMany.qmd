@@ -1,0 +1,291 @@
+---
+title: "learning-outcomes-many"
+format: 
+  html:
+    css: styles.scss
+---
+
+::: learning-outcome
+## Learning Outcomes
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome1
+## Learning Outcomes 1
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome2
+## Learning Outcomes 2
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome3
+## Learning Outcomes 3
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome4
+## Learning Outcomes 4
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome5
+## Learning Outcomes 5
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome6
+## Learning Outcomes 6
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome7
+## Learning Outcomes 7
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome8
+## Learning Outcomes 8
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome9
+## Learning Outcomes 9
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome10
+## Learning Outcomes 10
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome11
+## Learning Outcomes 11
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome12
+## Learning Outcomes 12
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome13
+## Learning Outcomes 13
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome14
+## Learning Outcomes 14
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome15
+## Learning Outcomes 15
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome16
+## Learning Outcomes 16
+
+<details>
+
+<summary>Click to reveal your learning outcomes...</summary>
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+
+</details>
+:::
+
+::: learning-outcome17
+## Learning Outcomes 17
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome18
+## Learning Outcomes 18
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome19
+## Learning Outcomes 19
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome20
+## Learning Outcomes 20
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome21
+## Learning Outcomes 21
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome22
+## Learning Outcomes 22
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome23
+## Learning Outcomes 23
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome24
+## Learning Outcomes 24
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome25
+## Learning Outcomes 25
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome26
+## Learning Outcomes 26
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome27
+## Learning Outcomes 27
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome28
+## Learning Outcomes 28
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome29
+## Learning Outcomes 29
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
+
+::: learning-outcome30
+## Learning Outcomes 30
+
+1.  Conduct simple and multiple linear regression analyses using R and the Tidyverse.\
+2.  Explore relationships between regression coefficients and correlation measures.\
+3.  Assess assumptions of linear regression including normality, linearity, and multicollinearity.\
+4.  Compute and interpret simple, partial, and semipartial correlations in R.
+:::
